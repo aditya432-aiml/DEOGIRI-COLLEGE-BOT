@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deogiri College Bot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="text">
+        <h1>
+          Welcome to <span class="bold"><b>Deogiri College</b> </span> <br />
+          Bot
+        </h1>
+        <p>
+          Click the blue symbol in the right corner and say "Hello" to initiate
+          a chat. <br /><br />
+          उजव्या कोपऱ्यातील निळ्या चिन्हावर क्लिक करा आणि चॅट सुरू करण्यासाठी
+          "हॅलो" म्हणा.
+        </p>
+      </div>
+      <div class="img">
+        <img src="logo.jpg" alt="SMART CITY LOGO" />
+      </div>
+    </div>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "97eef50e-5601-470d-a1ee-5fe4fb3afe5a", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "6dbaf49b-17f6-4b6d-a2af-55a759610b38", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
+</html>
